@@ -94,8 +94,8 @@ switch (command) {
     case "spotify-this-song":
 
         var spotify = new Spotify({
-            id: "b092ca6cd6a24f65ba42eba0a295eadf",
-            secret: "20592bde934548cbbdd1d3dc07120306"
+            id: "input here",
+            secret: "input here"
         });
 
         spotify.search({

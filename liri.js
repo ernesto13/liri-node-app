@@ -94,20 +94,21 @@ switch (command) {
     case "spotify-this-song":
 
         var spotify = new Spotify({
-            id: "<input here>",
-            secret: "<input here>"
+            id: "b092ca6cd6a24f65ba42eba0a295eadf",
+            secret: "20592bde934548cbbdd1d3dc07120306"
         });
 
         spotify.search({
             type: 'track',
             query: argument
         }, function(err, data) {
+            console.log(JSON.stringify((data)));
             if (err) {
                 return console.log('Error occurred: ' + err);
             }
             console.log("Spotify this =============");
             // calling artist to console
-            console.log("Artist(s): " + data.tracks.items[0].album.artist);
+            console.log("Artist(s): " + data.tracks.items[0].artists[0].name);
             console.log("Song: " +
                 data.tracks.items[0].name);
             console.log("Spotify Preview URL: " + data.tracks.items[0].preview_url);
@@ -130,7 +131,7 @@ switch (command) {
                 // trying to make a song play if argument is left empty.  I used an id but it's not working. 
                 spotify.lookup({
                     type: 'track',
-                    id: '6rPO02ozF3bM7NnOV4h6s2'
+                    id: '3DYVWvPh3kGwPasp7yjahc'
                 }, function(err, data) {
                     if (err) {
                         return console.log('Error occurred: ' + err);

@@ -1,6 +1,9 @@
 # liri-node-app
 ## LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
 
+### git clone and run in your terminal
+### npm install for required packages
+
 ## Commands
 * node liri.js my-tweets
 * LIRI will display latest tweets in the terminal.
